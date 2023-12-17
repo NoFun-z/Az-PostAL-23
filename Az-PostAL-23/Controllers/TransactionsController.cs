@@ -55,6 +55,7 @@ namespace Az_PostAL_23.Controllers
                         //Get servicebus namespace primary connection string
                         //Connect to servicebus and post data
                         var sender = _serviceBusClient.CreateSender("blobuploads");
+                        var senderPost = _serviceBusClient.CreateSender("transaction-log");
 
                         transaction.Status = "TransactionProccessing";
                         _context.Add(transaction);
@@ -80,6 +81,7 @@ namespace Az_PostAL_23.Controllers
                         var body = JsonSerializer.Serialize(transaction);
                         var message = new ServiceBusMessage(body);
                         await sender.SendMessageAsync(message);
+                        await senderPost.SendMessageAsync(message);
                     }
                     else
                     {

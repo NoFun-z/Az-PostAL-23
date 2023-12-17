@@ -34,7 +34,8 @@ namespace Az_PostAL_FunctionApp
             {
                 var message = new SendGridMessage();
                 message.AddTo("hoangloc1511@gmail.com");
-                message.AddContent("text/html", $"Processing completed for {transactionsFromDb.Count()} records");
+                message.AddContent("text/html", $"Processing completed for {transactionsFromDb.Count()} records\n" +
+                    $"Transaction details: {transactionsFromDb.FirstOrDefault().Note} - {transactionsFromDb.FirstOrDefault().FormattedAmount}");
                 message.SetFrom(new EmailAddress("hoangloc1511@gmail.com"));
                 message.SetSubject("A new Transaction has been successfully uploaded for AZ-PostAL service bus");
                 await messageCollector.AddAsync(message);
