@@ -1,0 +1,5 @@
+﻿//Migrations
+Add-Migration -Context ApplicationDBContext -o Data\Initial_Migrations Initial
+
+//Update DB
+Update-Database -Context ApplicationDBContext

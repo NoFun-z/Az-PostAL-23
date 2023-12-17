@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Az_PostAL_FunctionApp": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7059",
+      "launchBrowser": false
+    }
+  }
+}

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Az-PostAL-23", "Az-PostAL-23\Az-PostAL-23.csproj", "{01B2AE9E-7181-4EA9-91A0-46DDFB7F077E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AZ-PostAL-FunctionApp", "AZ-PostAL-FunctionApp", "{80E901FB-BF73-4B2D-867C-9D546767FCF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Az-PostAL-FunctionApp", "Az-PostAL-FunctionApp\Az-PostAL-FunctionApp.csproj", "{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01B2AE9E-7181-4EA9-91A0-46DDFB7F077E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B2AE9E-7181-4EA9-91A0-46DDFB7F077E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B2AE9E-7181-4EA9-91A0-46DDFB7F077E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B2AE9E-7181-4EA9-91A0-46DDFB7F077E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC} = {80E901FB-BF73-4B2D-867C-9D546767FCF6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45DE3A83-67AB-4C25-9D2F-14D0C7F96432}
+	EndGlobalSection
+EndGlobal
