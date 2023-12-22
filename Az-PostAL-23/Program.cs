@@ -21,10 +21,12 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlSer
 
 //Azure ServiceBus injection
 builder.Services.AddAzureClients(builder => {
-	builder.AddClient<ServiceBusClient, ServiceBusClientOptions>((_, _, _) =>
-	{
-		return new ServiceBusClient("az-postal-np.servicebus.windows.net", new DefaultAzureCredential());
-	});
+	//builder.AddClient<ServiceBusClient, ServiceBusClientOptions>((_, _, _) =>
+	//{
+	//	return new ServiceBusClient("Endpoint=sb://az-postal-np.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=CWkx5LTHv1/EX0+zfwliNqbZhXBoffbvE+ASbFG+2Og=", new DefaultAzureCredential());
+	//});
+	var connectionString = "Endpoint=sb://az-postal-np.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=CWkx5LTHv1/EX0+zfwliNqbZhXBoffbvE+ASbFG+2Og=";
+	builder.AddServiceBusClient(connectionString);
 });
 
 builder.Services.AddSingleton<IContainerService, ContainerService>();

@@ -21,7 +21,7 @@ namespace Az_PostAL_FunctionApp
         }
 
         [FunctionName("UpdateStatusToCompletedAndSendEmail")]
-        public async Task Run([TimerTrigger("0 */1 * * * *")]TimerInfo myTimer,
+        public async Task Run([TimerTrigger("0 */8 * * * *")]TimerInfo myTimer,
             [SendGrid(ApiKey = "CustomSendGridKeyAppSettingName")] IAsyncCollector<SendGridMessage> messageCollector,
             ILogger log)
         {
