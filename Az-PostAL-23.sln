@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AZ-PostAL-FunctionApp", "AZ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Az-PostAL-FunctionApp", "Az-PostAL-FunctionApp\Az-PostAL-FunctionApp.csproj", "{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AZ-PostAL-XUnitTestings", "AZ-PostAL-XUnitTestings\AZ-PostAL-XUnitTestings.csproj", "{42FF86A4-CF2D-4058-9303-0CA8B73BE725}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F82E6C46-DEE2-4014-B6C7-C35E4DD945BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42FF86A4-CF2D-4058-9303-0CA8B73BE725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42FF86A4-CF2D-4058-9303-0CA8B73BE725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42FF86A4-CF2D-4058-9303-0CA8B73BE725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42FF86A4-CF2D-4058-9303-0CA8B73BE725}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

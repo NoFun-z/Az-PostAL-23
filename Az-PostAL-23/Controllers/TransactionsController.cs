@@ -14,6 +14,11 @@ namespace Az_PostAL_23.Controllers
         private readonly IBlobService _blobService;
         private readonly ServiceBusClient _serviceBusClient;
 
+        public TransactionsController(IBlobService blobService)
+        {
+            _blobService = blobService;
+        }
+
         public TransactionsController(ApplicationDBContext context, IBlobService blobService, ServiceBusClient serviceBusClient)
         {
             _context = context;
@@ -59,7 +64,6 @@ namespace Az_PostAL_23.Controllers
 
                         transaction.Status = "TransactionProccessing";
                         _context.Add(transaction);
-                        await _context.SaveChangesAsync();
 
                         if (file != null || file.Length > 0)
                         {
@@ -74,8 +78,8 @@ namespace Az_PostAL_23.Controllers
 
                             var result = await _blobService.UploadBlob(fileName, file,
                                 categoryTitle, transaction);
-                            await _context.SaveChangesAsync();
                         }
+                        await _context.SaveChangesAsync();
 
                         //Set up servicebus body and send the message as json format
                         var body = JsonSerializer.Serialize(transaction);

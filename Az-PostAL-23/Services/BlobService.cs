@@ -95,7 +95,7 @@ namespace Az_PostAL_23.Services
                         {
                             using (var scope2 = _serviceProvider.CreateScope())
                             {
-                                var dbContext2 = scope.ServiceProvider.GetRequiredService<ApplicationDBContext>();
+                                var dbContext2 = scope2.ServiceProvider.GetRequiredService<ApplicationDBContext>();
                                 blobIndividual.CategoryId = dbContext.Categories
                                     .Where(c => c.Title.ToLower() == properties.Metadata["category"])
                                     .FirstOrDefault().CategoryId;

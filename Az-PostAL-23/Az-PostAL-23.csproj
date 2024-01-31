@@ -22,6 +22,7 @@
     <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.11" />
     <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="23.2.4" />
+    <PackageReference Include="xunit" Version="2.6.6" />
   </ItemGroup>
 
 </Project>
